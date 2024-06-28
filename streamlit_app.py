@@ -70,6 +70,56 @@ def main() :
   with col3:
       st.header("An owl")
       st.image("https://static.streamlit.io/examples/owl.jpg")
+#=======================================================================================
+#kode di atas adalah yg pertama
+#expander 
+  #dengan with atau dengan assignment 
+  expander = st.expander("Klik Untuk Detail ")
+  expander.write('Anda Telah Membuka Detail')
 
+  #sidebar 
+  with st.form("Data Diri"):
+     st.write("Area di dalam form")
+     slider_val = st.slider("Pilih Angka")
+     checkbox_val = st.checkbox("Setuju")
+
+     #Every form must have a submit button.
+     submitted = st.form_submit_button("Simpan")
+     if submitted:
+         st.write("Angka dipilih", slider_val, "checkbox", checkbox_val)
+
+  st.write("Area di luar form")
+
+  # Insert containers separated into tabs:
+  tab1, tab2 = st.tabs(["Tab 1", "Tab2"])
+  tab1.write("this is tab 1")
+  tab2.write("this is tab 2")
+
+  # You can also use "with" notation:
+  with tab1:
+     st.radio("Select one:", [1, 2])
+  
+  st.line_chart(house)
+ 
+  ##Membuat sidebar
+  st.sidebar.title("Sidebar")
+  input_text = st.sidebar.text_input("Masukkan sesuatu:")
+  input_number = st.sidebar.number_input("Masukkan angka:", min_value=0, max_value=100)
+
+  ###Tombol untuk memindahkan konten
+  if st.sidebar.button("Tampilkan di Mainbar"):
+     st.session_state['show_content'] = True
+  else:
+     st.session_state['show_content'] = False
+
+  #Menampilkan hasil di mainbar
+  st.title("Mainbar")
+  if 'show_content' in st.session_state and st.session_state['show_content']:
+     st.write(f"Teks dari sidebar: {input_text}")
+     st.write(f"Angka dari sidebar: {input_number}")
+  else:
+     st.write("Tidak ada konten untuk ditampilkan.")
+#batas expander    
+#=================================================================================================
 if __name__ == '__main__' :
    main()
