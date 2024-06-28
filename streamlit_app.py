@@ -6,7 +6,7 @@ import requests
 house = pd.read_csv('house_clean.csv')
 
 def main() : 
-  st.write('Minimal Example')
+  st.write('Minimal udah nyoba...')
 
 if __name__ == '__main__' : 
   main()
