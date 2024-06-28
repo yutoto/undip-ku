@@ -3,12 +3,12 @@ import streamlit as st
 #import requests
 #from st_aggrid import AgGrid
 
-#house = pd.read_csv('house_clean.csv')
+house = pd.read_csv('house_clean.csv')
 
-#def main() : 
-  #st.write('Minimal Example')
+def main() : 
+  st.write('Minimal Example')
 
-#if __name__ == '_main_' : 
+if __name__ == '__main__' : 
   #main()
 
 def main() : 
@@ -18,6 +18,6 @@ def main() :
   st.write('Some Phytagorean Equation : ')
   st.latex('c^2 = a^2+b^2')
 
-  #st.dataframe(house)
+  st.dataframe(house)
 if __name__ == '__main__' :
    main()
