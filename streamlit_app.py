@@ -3,7 +3,7 @@ import pandas as pd
 import requests
 #from st_aggrid import AgGrid
 
-house = pd.read_csv('house_clean.csv')
+house = pd.read_csv('house_clean.csv', usecols=['id', 'price'])
 
 def main() : 
   st.write('Minimal udah nyoba...')
