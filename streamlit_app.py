@@ -27,7 +27,7 @@ def main() :
   
   ##### Untuk menampilkan Grid -- masih blm tampil
   st.write('Menampilkan Dataframe dengan St AgGrid')
-  #AgGrid(house)
+  AgGrid(house)
   
   st.table([x for x in range(1,5)])
   
