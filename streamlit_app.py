@@ -24,7 +24,7 @@ def main() :
 
 ##### Untuk menulis metric
   st.write('Metrics')
-  st.metric(label="Temperature", value="70 °F", delta="-1.2 °F")
+  st.metric(label="Temperature", value="16 °C", delta="-10 °C")
   
   ##### Untuk menampilkan Grid -- masih blm tampil
   #st.write('Menampilkan Dataframe dengan St AgGrid')
