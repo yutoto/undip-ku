@@ -26,8 +26,8 @@ def main() :
   st.metric(label="Temperature", value="70 °F", delta="-1.2 °F")
   
   ##### Untuk menampilkan Grid -- masih blm tampil
-  st.write('Menampilkan Dataframe dengan St AgGrid')
-  AgGrid(house)
+  #st.write('Menampilkan Dataframe dengan St AgGrid')
+  #AgGrid(house)
   
   st.table([x for x in range(1,5)])
   
